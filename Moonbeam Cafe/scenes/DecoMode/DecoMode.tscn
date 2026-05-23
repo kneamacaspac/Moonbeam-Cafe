@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c2f6jbubn7fd5"]
 
 [ext_resource type="Script" uid="uid://br0dhqdjmxsbs" path="res://Moonbeam Cafe/scripts/DecoMode.gd" id="1_1nr5b"]
+[ext_resource type="Texture2D" uid="uid://swiy4ypc1vf7" path="res://Moonbeam Cafe/assets/foods/59_jelly.png" id="2_ih1xm"]
 
 [node name="DecoMode" type="CanvasLayer" unique_id=1764657380]
 script = ExtResource("1_1nr5b")
@@ -19,3 +20,5 @@ offset_left = 26.0
 offset_top = 559.0
 offset_right = 90.0
 offset_bottom = 625.0
+icon = ExtResource("2_ih1xm")
+flat = true

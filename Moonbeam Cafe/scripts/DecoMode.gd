@@ -104,30 +104,18 @@ func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		if held_furniture != "":
 			# Place the held furniture
-			_place_furniture(held_furniture, world_pos)
+			_place_furniture(world_pos)
 		else:
 			# Check if player clicked an already-placed furniture to pick it up
 			_try_pick_up(world_pos)
 
 # ── Placing ──────────────────────────────────────────────────────────────────
-func _place_furniture(item_id: String, pos: Vector2) -> void:
-	# ✅ Stock check FIRST, before doing anything
-	var stock = GameManager.furniture_stock.get(item_id, 0)
-	if stock <= 0:
-		return  # nothing in stock, stop here
-
-	# Snap to 32x32 grid — renamed to avoid built-in conflict
-	var snap_pos = (pos / 32).floor() * 32
-
-	# Deduct stock
-	GameManager.furniture_stock[item_id] -= 1
-
-	# Place it
-	placed_furniture.append({"id": item_id, "pos": snap_pos})
-	_spawn_furniture_sprite(item_id, snap_pos)
+func _place_furniture(world_pos: Vector2) -> void:
+	var snapped = (world_pos / 32).floor() * 32
+	placed_furniture.append({"id": held_furniture, "pos": snapped})
+	_spawn_furniture_sprite(held_furniture, snapped)
 	_clear_preview()
 	held_furniture = ""
-	
 
 func _spawn_furniture_sprite(item_id: String, pos: Vector2) -> void:
 	var item = GameManager.find_item(item_id)
