@@ -109,7 +109,7 @@ follow_viewport_enabled = true
 
 [node name="ShopMenu" parent="." unique_id=2048110569 instance=ExtResource("15_c6cbm")]
 
-[node name="MiniGameSelector" parent="." unique_id=1102896061 instance=ExtResource("16_wssrg")]
+[node name="MiniGameSelector" parent="." unique_id=1102896061 groups=["mini_game_selector"] instance=ExtResource("16_wssrg")]
 
 [node name="MathGame" parent="." unique_id=335380822 instance=ExtResource("18_xprj0")]
 

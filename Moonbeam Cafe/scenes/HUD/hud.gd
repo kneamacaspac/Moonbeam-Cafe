@@ -34,6 +34,6 @@ func _on_deco_button_pressed() -> void:
 		deco.enter_deco_mode()
 
 func _on_minigame_button_pressed() -> void:
-	var selector = get_tree().get_first_node_in_group("minigame_selector")
+	var selector = get_tree().get_first_node_in_group("mini_game_selector")
 	if selector:
 		selector.open()
