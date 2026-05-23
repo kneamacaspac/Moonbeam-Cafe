@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://br7bwlbm2gu85"]
+
+[ext_resource type="Script" uid="uid://c56ddagdgvv8g" path="res://Moonbeam Cafe/scenes/order menu/order_menu.gd" id="1_aiubs"]
+
+[node name="OrderMenu" type="CanvasLayer" unique_id=612616827]
+script = ExtResource("1_aiubs")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1436092429]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer" unique_id=1328047637]
+layout_mode = 2
+
+[node name="MenuGrid" type="GridContainer" parent="PanelContainer/VBoxContainer" unique_id=902074807]
+layout_mode = 2
+
+[node name="CloseButton" type="Button" parent="PanelContainer/VBoxContainer" unique_id=1100004156]
+layout_mode = 2
+size_flags_vertical = 0

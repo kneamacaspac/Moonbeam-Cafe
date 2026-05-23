@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://csee2oebgovon"]
+
+[ext_resource type="Script" uid="uid://eq8hf7pbt7wi" path="res://Moonbeam Cafe/scenes/ShopMenu/shop_menu.gd" id="1_0r87f"]
+
+[node name="ShopMenu" type="CanvasLayer" unique_id=2048110569]
+script = ExtResource("1_0r87f")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=271370864]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -197.5
+offset_top = -119.5
+offset_right = 197.5
+offset_bottom = 119.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TabContainer" type="TabContainer" parent="PanelContainer" unique_id=1826890883]
+layout_mode = 2
+current_tab = 0
+
+[node name="Drinks" type="GridContainer" parent="PanelContainer/TabContainer" unique_id=1724712942]
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="Pastries" type="GridContainer" parent="PanelContainer/TabContainer" unique_id=668304481]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="Furniture" type="GridContainer" parent="PanelContainer/TabContainer" unique_id=405630176]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 2
+
+[node name="CloseButton" type="Button" parent="." unique_id=199145]
+offset_left = 357.0
+offset_right = 395.0
+offset_bottom = 31.0
+
+[node name="GoldLabel" type="Label" parent="." unique_id=98754262]
+offset_right = 40.0
+offset_bottom = 23.0

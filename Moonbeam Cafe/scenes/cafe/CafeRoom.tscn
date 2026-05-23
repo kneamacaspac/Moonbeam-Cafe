@@ -1,0 +1,116 @@
+[gd_scene format=4 uid="uid://ixhmkjk7lfji"]
+
+[ext_resource type="Script" uid="uid://d00uwlbo817p0" path="res://Moonbeam Cafe/scenes/cafe/cafe_room.gd" id="1_jka6g"]
+[ext_resource type="PackedScene" uid="uid://crygqnperljbh" path="res://Moonbeam Cafe/scenes/characters/Witch.tscn" id="1_sbn64"]
+[ext_resource type="Texture2D" uid="uid://bkw7bn8yhqt0n" path="res://Moonbeam Cafe/assets/furniture/walls/beigewall.png" id="2_ms2qt"]
+[ext_resource type="Texture2D" uid="uid://6mxxfm2maq54" path="res://Moonbeam Cafe/assets/furniture/floors/woodenfloor.png" id="3_ex1yp"]
+[ext_resource type="Texture2D" uid="uid://cnl8iv8x6h2dc" path="res://Moonbeam Cafe/assets/furniture/furniture sets/table.png" id="4_fwuc1"]
+[ext_resource type="Script" uid="uid://c3k5hqu0g0r8" path="res://Moonbeam Cafe/scenes/cafe/seat_1.gd" id="5_ss5q4"]
+[ext_resource type="Script" uid="uid://f2ui1xpnfo6m" path="res://Moonbeam Cafe/scenes/cafe/seat_2.gd" id="6_ajaa1"]
+[ext_resource type="Script" uid="uid://bfjs1lfam4em3" path="res://Moonbeam Cafe/scenes/cafe/seat_3.gd" id="7_au57r"]
+[ext_resource type="Script" uid="uid://bbwbrvijm0b0x" path="res://Moonbeam Cafe/scenes/cafe/seat_4.gd" id="8_jka6g"]
+[ext_resource type="Script" uid="uid://dws8fs786db4p" path="res://Moonbeam Cafe/scenes/cafe/SlimeSpawner.gd" id="9_ajaa1"]
+[ext_resource type="PackedScene" uid="uid://dgbpmetyttdon" path="res://Moonbeam Cafe/scenes/characters/Slime.tscn" id="10_au57r"]
+[ext_resource type="PackedScene" uid="uid://dsymfj83pmfak" path="res://Moonbeam Cafe/scenes/HUD/HUD.tscn" id="12_xypj5"]
+[ext_resource type="PackedScene" uid="uid://br7bwlbm2gu85" path="res://Moonbeam Cafe/scenes/order menu/OrderMenu.tscn" id="13_galtc"]
+[ext_resource type="PackedScene" uid="uid://c2f6jbubn7fd5" path="res://Moonbeam Cafe/scenes/DecoMode/DecoMode.tscn" id="14_4ddko"]
+[ext_resource type="PackedScene" uid="uid://csee2oebgovon" path="res://Moonbeam Cafe/scenes/ShopMenu/ShopMenu.tscn" id="15_c6cbm"]
+[ext_resource type="PackedScene" uid="uid://dpded7qajbsv5" path="res://Moonbeam Cafe/scenes/minigames/MiniGameSelector.tscn" id="16_wssrg"]
+[ext_resource type="PackedScene" uid="uid://rtmvxyl4o2qh" path="res://Moonbeam Cafe/scenes/minigames/MemoryGame/MemoryGame.tscn" id="18_f3bja"]
+[ext_resource type="PackedScene" uid="uid://b2hwmd0hfiqvn" path="res://Moonbeam Cafe/scenes/minigames/MathGame/MathGame.tscn" id="18_xprj0"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_sbn64"]
+vertices = PackedVector2Array(217, 180.96094, -406.95313, 179.03125, -406.03906, -34.09375, 217, -39.898438)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-416, -44, 227, -50, 227, 191, -417, 189)])
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1qfyd"]
+texture = ExtResource("2_ms2qt")
+texture_region_size = Vector2i(32, 32)
+0:0/size_in_atlas = Vector2i(1, 3)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_roe5s"]
+texture = ExtResource("3_ex1yp")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_ljxj7"]
+tile_size = Vector2i(32, 32)
+sources/3 = SubResource("TileSetAtlasSource_roe5s")
+sources/1 = SubResource("TileSetAtlasSource_1qfyd")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iuko6"]
+texture = ExtResource("4_fwuc1")
+texture_region_size = Vector2i(32, 32)
+0:0/size_in_atlas = Vector2i(2, 2)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_0d4c4"]
+tile_size = Vector2i(32, 32)
+sources/1 = SubResource("TileSetAtlasSource_iuko6")
+
+[node name="CafeRoom" type="Node2D" unique_id=1600808000]
+script = ExtResource("1_jka6g")
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=1956578027 groups=["nav_region"]]
+navigation_polygon = SubResource("NavigationPolygon_sbn64")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1162865095]
+position = Vector2(-94, -2)
+zoom = Vector2(2, 2)
+
+[node name="floor" type="TileMapLayer" parent="." unique_id=1378628926]
+position = Vector2(-94, -2)
+tile_map_data = PackedByteArray("AAD8//7/AwAAAAAAAAD9//7/AwAAAAAAAAD+//7/AwAAAAAAAAD///7/AwAAAAAAAAAAAP7/AwAAAAAAAAABAP7/AwAAAAAAAAACAP7/AwAAAAAAAAADAP7/AwAAAAAAAAAEAP7/AwAAAAAAAAAFAP7/AwAAAAAAAAAFAP//AwAAAAAAAAAEAP//AwAAAAAAAAADAP//AwAAAAAAAAACAP//AwAAAAAAAAABAP//AwAAAAAAAAAAAP//AwAAAAAAAAD9////AwAAAAAAAAD9/wAAAwAAAAAAAAD8////AwAAAAAAAAD8/wAAAwAAAAAAAAD+/wAAAwAAAAAAAAD//wAAAwAAAAAAAAAAAAAAAwAAAAAAAAABAAAAAwAAAAAAAAACAAAAAwAAAAAAAAADAAAAAwAAAAAAAAAEAAAAAwAAAAAAAAAFAAAAAwAAAAAAAAAFAAEAAwAAAAAAAAAEAAEAAwAAAAAAAAADAAEAAwAAAAAAAAACAAEAAwAAAAAAAAABAAEAAwAAAAAAAAAAAAEAAwAAAAAAAAD//wEAAwAAAAAAAAD+/wEAAwAAAAAAAAD9/wEAAwAAAAAAAAD8/wEAAwAAAAAAAAD8/wIAAwAAAAAAAAD9/wIAAwAAAAAAAAD+/wIAAwAAAAAAAAD//wIAAwAAAAAAAAAAAAIAAwAAAAAAAAABAAIAAwAAAAAAAAACAAIAAwAAAAAAAAADAAIAAwAAAAAAAAAEAAIAAwAAAAAAAAAFAAIAAwAAAAAAAAAFAAMAAwAAAAAAAAAEAAMAAwAAAAAAAAADAAMAAwAAAAAAAAACAAMAAwAAAAAAAAABAAMAAwAAAAAAAAAAAAMAAwAAAAAAAAD//wMAAwAAAAAAAAD+/wMAAwAAAAAAAAD9/wMAAwAAAAAAAAD8/wMAAwAAAAAAAAD8/wQAAwAAAAAAAAD9/wQAAwAAAAAAAAD+/wQAAwAAAAAAAAD//wQAAwAAAAAAAAAAAAQAAwAAAAAAAAABAAQAAwAAAAAAAAACAAQAAwAAAAAAAAADAAQAAwAAAAAAAAAEAAQAAwAAAAAAAAAFAAQAAwAAAAAAAAAGAAQAAwAAAAAAAAAGAAMAAwAAAAAAAAAGAAIAAwAAAAAAAAAGAAEAAwAAAAAAAAAGAP7/AwAAAAAAAAAGAP//AwAAAAAAAAAGAAAAAwAAAAAAAAD6//7/AwAAAAAAAAD6////AwAAAAAAAAD6/wAAAwAAAAAAAAD6/wEAAwAAAAAAAAD6/wIAAwAAAAAAAAD7/wIAAwAAAAAAAAD7/wMAAwAAAAAAAAD6/wQAAwAAAAAAAAD6/wMAAwAAAAAAAAD7/wQAAwAAAAAAAAD7/wEAAwAAAAAAAAD7/wAAAwAAAAAAAAD7////AwAAAAAAAAD7//7/AwAAAAAAAAD+////AwAAAAAAAAD/////AwAAAAAAAAD5/wQAAwAAAAAAAAD5/wMAAwAAAAAAAAD5/wIAAwAAAAAAAAD5/wEAAwAAAAAAAAD5/wAAAwAAAAAAAAD5////AwAAAAAAAAD5//7/AwAAAAAAAAD5//z/AQAAAAAAAAD5//v/AwAAAAAAAAD4//v/AwAAAAAAAAD3//v/AwAAAAAAAAD3//z/AQAAAAAAAAD3//7/AwAAAAAAAAD3////AwAAAAAAAAD3/wAAAwAAAAAAAAD3/wEAAwAAAAAAAAD4/wEAAwAAAAAAAAD4/wIAAwAAAAAAAAD4/wMAAwAAAAAAAAD4/wQAAwAAAAAAAAD3/wQAAwAAAAAAAAD3/wMAAwAAAAAAAAD2/wMAAwAAAAAAAAD3/wIAAwAAAAAAAAD4////AwAAAAAAAAD4//7/AwAAAAAAAAD4/wAAAwAAAAAAAAD6//v/AwAAAAAAAAD7//v/AwAAAAAAAAD8//v/AwAAAAAAAAD9//v/AwAAAAAAAAD+//v/AwAAAAAAAAD///v/AwAAAAAAAAAAAPv/AwAAAAAAAAABAPv/AwAAAAAAAAACAPv/AwAAAAAAAAADAPv/AwAAAAAAAAAEAPv/AwAAAAAAAAAFAPv/AwAAAAAAAAAGAPv/AwAAAAAAAAAHAPv/AwAAAAAAAAAHAPz/AQAAAAAAAAAIAPz/AQAAAAAAAAAIAPv/AwAAAAAAAAADAPz/AQAAAAAAAAACAPz/AQAAAAAAAAABAPz/AQAAAAAAAAAAAPz/AQAAAAAAAAD///z/AQAAAAAAAAD+//z/AQAAAAAAAAD9//z/AQAAAAAAAAD8//z/AQAAAAAAAAD7//z/AQAAAAAAAAD6//z/AQAAAAAAAAD4//z/AQAAAAAAAAD2//z/AQAAAAAAAAAEAPz/AQAAAAAAAAAFAPz/AQAAAAAAAAAGAPz/AQAAAAAAAAAJAPz/AQAAAAAAAAAKAPz/AwAAAAAAAAALAPz/AwAAAAAAAAAKAP3/AwAAAAAAAAAHAP7/AwAAAAAAAAAHAP//AwAAAAAAAAAIAP7/AwAAAAAAAAAIAP//AwAAAAAAAAAIAAAAAwAAAAAAAAAJAAEAAwAAAAAAAAAJAAIAAwAAAAAAAAAJAAMAAwAAAAAAAAAIAAMAAwAAAAAAAAAIAAQAAwAAAAAAAAAIAAUAAwAAAAAAAAAHAAUAAwAAAAAAAAAHAAQAAwAAAAAAAAAHAAMAAwAAAAAAAAAHAAIAAwAAAAAAAAAHAAEAAwAAAAAAAAAHAAAAAwAAAAAAAAAIAAEAAwAAAAAAAAAIAAIAAwAAAAAAAAAGAAUAAwAAAAAAAAAFAAUAAwAAAAAAAAAEAAUAAwAAAAAAAAADAAUAAwAAAAAAAAACAAUAAwAAAAAAAAABAAUAAwAAAAAAAAAAAAUAAwAAAAAAAAD//wUAAwAAAAAAAAD+/wUAAwAAAAAAAAD9/wUAAwAAAAAAAAD8/wUAAwAAAAAAAAD7/wUAAwAAAAAAAAD6/wUAAwAAAAAAAAD2/wQAAwAAAAAAAAD2/wUAAwAAAAAAAAD3/wUAAwAAAAAAAAD4/wUAAwAAAAAAAAD5/wUAAwAAAAAAAAD2/wIAAwAAAAAAAAD2/wEAAwAAAAAAAAD2/wAAAwAAAAAAAAD2////AwAAAAAAAAD2//7/AwAAAAAAAAD2//v/AwAAAAAAAAAJAP7/AwAAAAAAAAAJAP//AwAAAAAAAAAJAAAAAwAAAAAAAAAJAAQAAwAAAAAAAAAJAAUAAwAAAAAAAAAJAPv/AwAAAAAAAAA=")
+tile_set = SubResource("TileSet_ljxj7")
+
+[node name="furnitures" type="TileMapLayer" parent="." unique_id=1987434768]
+tile_map_data = PackedByteArray("AAD6//3/AQAAAAAAAAD8//3/AQAAAAAAAAD+//3/AQAAAAAAAAD4//3/AQAAAAAAAAA=")
+tile_set = SubResource("TileSet_0d4c4")
+occlusion_enabled = false
+
+[node name="Witch" parent="." unique_id=1503554366 instance=ExtResource("1_sbn64")]
+position = Vector2(-131, -35)
+
+[node name="Seat1" type="Node2D" parent="." unique_id=936211450 groups=["seats"]]
+position = Vector2(-133, 41)
+script = ExtResource("5_ss5q4")
+
+[node name="Seat2" type="Node2D" parent="." unique_id=1834359181 groups=["seats"]]
+position = Vector2(-287, 131)
+script = ExtResource("6_ajaa1")
+
+[node name="Seat3" type="Node2D" parent="." unique_id=91689051 groups=["seats"]]
+position = Vector2(-130, 129)
+script = ExtResource("7_au57r")
+
+[node name="Seat4" type="Node2D" parent="." unique_id=972162312 groups=["seats"]]
+position = Vector2(-285, 38)
+script = ExtResource("8_jka6g")
+
+[node name="SlimeSpawner" type="Node2D" parent="." unique_id=423372915]
+position = Vector2(-54, 166)
+script = ExtResource("9_ajaa1")
+slime_scene = ExtResource("10_au57r")
+
+[node name="Timer" type="Timer" parent="SlimeSpawner" unique_id=1012672062]
+autostart = true
+
+[node name="HUD" parent="." unique_id=2033657793 instance=ExtResource("12_xypj5")]
+offset = Vector2(49, 0)
+transform = Transform2D(1, 0, 0, 1, 49, 0)
+follow_viewport_enabled = true
+
+[node name="OrderMenu" parent="." unique_id=612616827 instance=ExtResource("13_galtc")]
+follow_viewport_enabled = true
+
+[node name="DecoMode" parent="." unique_id=1764657380 instance=ExtResource("14_4ddko")]
+
+[node name="ShopMenu" parent="." unique_id=2048110569 instance=ExtResource("15_c6cbm")]
+
+[node name="MiniGameSelector" parent="." unique_id=1102896061 instance=ExtResource("16_wssrg")]
+
+[node name="MathGame" parent="." unique_id=335380822 instance=ExtResource("18_xprj0")]
+
+[node name="MemoryGame" parent="." unique_id=851274305 instance=ExtResource("18_f3bja")]

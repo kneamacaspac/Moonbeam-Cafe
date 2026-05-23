@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://rtmvxyl4o2qh"]
+
+[ext_resource type="Script" uid="uid://67ykkr7inqby" path="res://Moonbeam Cafe/scenes/minigames/MemoryGame/memory_game.gd" id="1_fuwfj"]
+
+[node name="MemoryGame" type="CanvasLayer" unique_id=851274305]
+script = ExtResource("1_fuwfj")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1857009310]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -95.0
+offset_right = 186.0
+offset_bottom = 95.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer" unique_id=1032225665]
+layout_mode = 2
+
+[node name="TitleLabel" type="Label" parent="PanelContainer/VBoxContainer" unique_id=29054637]
+layout_mode = 2
+text = "Color Memory"
+
+[node name="RoundLabel" type="Label" parent="PanelContainer/VBoxContainer" unique_id=1838717036]
+layout_mode = 2
+text = "Round 1"
+
+[node name="StatusLabel" type="Label" parent="PanelContainer/VBoxContainer" unique_id=814502449]
+layout_mode = 2
+text = "Watch carefully!"
+
+[node name="TimerLabel" type="Label" parent="PanelContainer/VBoxContainer" unique_id=1037339581]
+layout_mode = 2
+horizontal_alignment = 1
+
+[node name="SlimeGrid" type="GridContainer" parent="PanelContainer/VBoxContainer" unique_id=605301554]
+layout_mode = 2
+
+[node name="RedButton" type="Button" parent="PanelContainer/VBoxContainer/SlimeGrid" unique_id=1984629487]
+layout_mode = 2
+text = "🟥"
+
+[node name="GreenButton" type="Button" parent="PanelContainer/VBoxContainer/SlimeGrid" unique_id=1997192991]
+layout_mode = 2
+text = "🟩"
+
+[node name="BlueButton" type="Button" parent="PanelContainer/VBoxContainer/SlimeGrid" unique_id=1295641482]
+layout_mode = 2
+text = "🟦"
+
+[node name="YellowButton" type="Button" parent="PanelContainer/VBoxContainer/SlimeGrid" unique_id=732847229]
+layout_mode = 2
+text = "🟨"
+
+[node name="GoldEarnedLabel" type="Label" parent="PanelContainer/VBoxContainer" unique_id=1559240301]
+layout_mode = 2
+text = "Gold: 0"
+
+[node name="CloseButton" type="Button" parent="PanelContainer/VBoxContainer" unique_id=742870941]
+layout_mode = 2
+text = "Exit"

@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://dsymfj83pmfak"]
+
+[ext_resource type="Script" uid="uid://4egw08h3a74m" path="res://Moonbeam Cafe/scenes/HUD/hud.gd" id="1_b8yjn"]
+
+[node name="HUD" type="CanvasLayer" unique_id=2033657793]
+script = ExtResource("1_b8yjn")
+
+[node name="OrderQueue" type="VBoxContainer" parent="." unique_id=19428173]
+offset_left = -88.0
+offset_right = -48.0
+offset_bottom = 40.0
+
+[node name="GoldLabel" type="Label" parent="." unique_id=844746156]
+offset_left = -251.0
+offset_right = -211.0
+offset_bottom = 23.0
+
+[node name="ShopButton" type="Button" parent="." unique_id=1713822900]
+offset_left = 5.0
+offset_right = 52.0
+offset_bottom = 31.0
+text = "Shop"
+
+[node name="MiniGameButton" type="Button" parent="." unique_id=163564864]
+offset_left = -103.0
+offset_top = -1.0
+offset_right = -3.0
+offset_bottom = 30.0
+text = "Mini Games"
+
+[node name="DecoButton" type="Button" parent="." unique_id=982779617]
+offset_left = -187.0
+offset_right = -108.0
+offset_bottom = 31.0
+text = "Decorate"

@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://dpded7qajbsv5"]
+
+[ext_resource type="Script" uid="uid://8toeolb1mc2n" path="res://Moonbeam Cafe/scenes/minigames/mini_game_selector.gd" id="1_uc2c3"]
+
+[node name="MiniGameSelector" type="CanvasLayer" unique_id=1102896061]
+script = ExtResource("1_uc2c3")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1721944139]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -29.5
+offset_right = 280.0
+offset_bottom = 170.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer" unique_id=1297573041]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer" unique_id=1732147553]
+layout_mode = 2
+text = "Choose a Mini Game"
+
+[node name="MemoryButton" type="Button" parent="PanelContainer/VBoxContainer" unique_id=1043075556]
+layout_mode = 2
+text = "Memory Game"
+
+[node name="MathButton" type="Button" parent="PanelContainer/VBoxContainer" unique_id=355415300]
+layout_mode = 2
+text = "Math Quiz"
+
+[node name="CloseButton" type="Button" parent="PanelContainer/VBoxContainer" unique_id=531886129]
+layout_mode = 2
+text = "Close"

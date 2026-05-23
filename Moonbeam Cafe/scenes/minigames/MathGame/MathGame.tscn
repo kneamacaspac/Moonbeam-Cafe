@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://b2hwmd0hfiqvn"]
+
+[ext_resource type="Script" uid="uid://x35m713bb7d1" path="res://Moonbeam Cafe/scenes/minigames/MathGame/math_game.gd" id="1_hijaj"]
+
+[node name="MathGame" type="CanvasLayer" unique_id=335380822]
+script = ExtResource("1_hijaj")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=158222716]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer" unique_id=683264970]
+layout_mode = 2
+
+[node name="TitleLabel" type="Label" parent="PanelContainer/VBoxContainer" unique_id=890164398]
+layout_mode = 2
+
+[node name="DifficultyPicker" type="HBoxContainer" parent="PanelContainer/VBoxContainer" unique_id=936776719]
+layout_mode = 2
+
+[node name="EasyButton" type="Button" parent="PanelContainer/VBoxContainer/DifficultyPicker" unique_id=1645940332]
+layout_mode = 2
+text = "Easy (+10)"
+
+[node name="MediumButton" type="Button" parent="PanelContainer/VBoxContainer/DifficultyPicker" unique_id=1328712523]
+layout_mode = 2
+text = "Medium (+30)"
+
+[node name="HardButton" type="Button" parent="PanelContainer/VBoxContainer/DifficultyPicker" unique_id=1158848170]
+layout_mode = 2
+text = "Hard(+50)"
+
+[node name="QuizPanel" type="VBoxContainer" parent="PanelContainer/VBoxContainer" unique_id=988002581]
+layout_mode = 2
+
+[node name="ProgressLabel" type="Label" parent="PanelContainer/VBoxContainer/QuizPanel" unique_id=1269300773]
+layout_mode = 2
+text = "Question 1 / 5"
+
+[node name="QuestionLabel" type="Label" parent="PanelContainer/VBoxContainer/QuizPanel" unique_id=2035617892]
+layout_mode = 2
+text = "? + ? = ?"
+
+[node name="AnswerInput" type="LineEdit" parent="PanelContainer/VBoxContainer/QuizPanel" unique_id=1212517893]
+layout_mode = 2
+placeholder_text = "Your answer..."
+
+[node name="SubmitButton" type="Button" parent="PanelContainer/VBoxContainer/QuizPanel" unique_id=23911981]
+layout_mode = 2
+
+[node name="ResultLabel" type="Label" parent="PanelContainer/VBoxContainer/QuizPanel" unique_id=1592244927]
+layout_mode = 2
+
+[node name="CloseButton" type="Button" parent="PanelContainer/VBoxContainer" unique_id=256134869]
+layout_mode = 2
+text = "Exit"

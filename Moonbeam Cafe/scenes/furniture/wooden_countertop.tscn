@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://y3h3v1qyj7ub"]
+
+[ext_resource type="Script" uid="uid://cmw2ugcum6o6i" path="res://Moonbeam Cafe/scenes/furniture/wooden_countertop.gd" id="1_xi1o4"]
+[ext_resource type="Texture2D" uid="uid://cnl8iv8x6h2dc" path="res://Moonbeam Cafe/assets/furniture/furniture sets/table.png" id="2_4olck"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hc8ar"]
+size = Vector2(58, 42)
+
+[node name="WoodenCountertop" type="StaticBody2D" unique_id=1037250787]
+script = ExtResource("1_xi1o4")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1701161038]
+texture = ExtResource("2_4olck")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=737647474]
+position = Vector2(0, 2)
+shape = SubResource("RectangleShape2D_hc8ar")
